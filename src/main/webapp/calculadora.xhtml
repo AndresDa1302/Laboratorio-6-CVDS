@@ -8,20 +8,37 @@ and open the template in the editor.
 <html xmlns="http://www.w3c.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
-    <h:head></h:head>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <h:head>     
+    </h:head>
     <h:body>
+        <div class="header">
+            <h1>Calculadora de Estadistica</h1>
+            <p>Escuela Colombiana de Ingenieria Julio Garavito</p>
+         </div>
+
+         <div class="content">
+        
+
         <h:form id="calculadora_form">
             <p:inputText id="Entrada" type="text" binding="#{input}" />
-            <br><p:commandButton value="Calcular" update="calculadora_form" actionListener="#{calculadoraBean.calcularTodo(input.value)}"/>
-            <p:commandButton value="Resetear" update="calculadora_form" actionListener="#{calculadoraBean.restart()}"/></br>
-            <br><p>Moda</p><p:outputLabel value="#{calculadoraBean.moda}" /></br>
-            <br><p>Media</p><p:outputLabel value="#{calculadoraBean.media}" /></br>
-            <br><p>Varianza</p><p:outputLabel value="#{calculadoraBean.varianza}" /></br>
-            <br><p>Desviación Estandar</p><p:outputLabel value="#{calculadoraBean.desStan}"/></br>
             
+            <br><p>Moda <p:outputLabel value="#{calculadoraBean.moda}" /></p>
+            <p>Media <p:outputLabel value="#{calculadoraBean.media}" /></p>
+            <p>Varianza <p:outputLabel value="#{calculadoraBean.varianza}" /></p>
+            <p>Desviación Estandar <p:outputLabel value="#{calculadoraBean.desStan}"/></p></br>
             
-            
-            
+            <br></br>
+            <p:commandButton value="Calcular" update="calculadora_form" actionListener="#{calculadoraBean.calcularTodo(input.value)}" styleClass="button"/>
+            <p:commandButton value="Resetear" update="calculadora_form" actionListener="#{calculadoraBean.restart()}" styleClass="button"/>
+            <br></br>
+             
+            <p:dataTable var="lista" value="#{calculadoraBean.lista}" style="width:250px;" styleClass = "Table">
+                <p:column headerText="Valores Anteriores">
+                    <h:outputText value="#{lista}" />
+                </p:column>
+            </p:dataTable>
         </h:form>
+         </div>
     </h:body>
 </html>
