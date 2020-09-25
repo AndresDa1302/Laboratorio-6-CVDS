@@ -23,15 +23,17 @@ and open the template in the editor.
         <h:form id="calculadora_form">
             <p:inputText id="Entrada" type="text" binding="#{input}" />
             
-            <br><p>Moda <p:outputLabel value="#{calculadoraBean.moda}" /></p>
-            <p>Media <p:outputLabel value="#{calculadoraBean.media}" /></p>
-            <p>Varianza <p:outputLabel value="#{calculadoraBean.varianza}" /></p>
-            <p>Desviación Estandar <p:outputLabel value="#{calculadoraBean.desStan}"/></p></br>
+            <br><p>Moda <p:outputLabel value="#{calculadoraBean.moda}" /></p></br>
+            <br><p>Media <p:outputLabel value="#{calculadoraBean.media}" /></p></br>
+            <br><p>Varianza <p:outputLabel value="#{calculadoraBean.varianza}" /></p></br>
+            <br><p>Desviacion Estandar <p:outputLabel value="#{calculadoraBean.desStan}"/></p></br>
             
             <br></br>
             <p:commandButton value="Calcular" update="calculadora_form" actionListener="#{calculadoraBean.calcularTodo(input.value)}" styleClass="button"/>
             <p:commandButton value="Resetear" update="calculadora_form" actionListener="#{calculadoraBean.restart()}" styleClass="button"/>
             <br></br>
+            
+            
              
             <p:dataTable var="lista" value="#{calculadoraBean.lista}" style="width:250px;" styleClass = "Table">
                 <p:column headerText="Valores Anteriores">
