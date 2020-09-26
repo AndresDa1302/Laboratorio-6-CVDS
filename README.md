@@ -1,7 +1,7 @@
 # Laboratorio-6-cvds
--Andres Felipe Davila gutierrez/ 
+-Andres Felipe Davila gutierrez
 
--Javier Esteban Lopez Peña/
+-Javier Esteban Lopez Peña
 
 -https://lab6cvds-andresjavier.herokuapp.com/faces/calculadora.xhtml
 
