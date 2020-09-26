@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
-import java.util.HashSet;
+
 import java.util.Optional;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

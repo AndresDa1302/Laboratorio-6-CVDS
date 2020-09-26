@@ -9,7 +9,7 @@ package edu.eci.cvds.servlet;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import javax.enterprise.context.ApplicationScoped;
+
 import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedBean;
 

@@ -13,10 +13,9 @@ public class Todo {
    private int userId=1;
    private int id=1;
    private String tittle="delectus aut autem";
-   private boolean completed=false;
    
-   public Todo(){
-   } 
+   
+   public Todo(){} 
    
    public int getUserId()
    {
@@ -48,6 +47,7 @@ public class Todo {
    }
    public void setCompleted(boolean completed)
    {
-       this.completed=completed;
+       
+       completed=false;
    }
 }
